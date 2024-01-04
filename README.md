@@ -1,22 +1,25 @@
 
-Swifty E-Commerce Backend API
+# Swifty E-Commerce Backend API
 Welcome to the Swifty E-Commerce Backend API! This API powers the backend functionality of our e-commerce application, allowing seamless management of products and orders.
 
-Project Overview
+## Project Overview
 The Swifty E-Commerce Backend API is built using Spring Boot and facilitates the core functionalities of our e-commerce platform. It includes features for product management and order processing.
 
-Functional Requirements
-1. Product Management
-1.1 Create a Product
-Endpoint: POST /api/products
-Request Payload:
-{
+## Functional Requirements
+### 1. Product Management
+**1.1 Create a Product**
++ **Endpoint**: > POST /api/products
+* **Request Payload:**
+```
+   {
 	"name": "Product Name",
 	"description": "Product Description",
 	"price": 29.99,
 	"stockQuantity": 100
 }
-Response Payload:
+```
+* **Response Payload:**
+```
 {
 	"id": 1,
 	"name": "Product Name",
@@ -24,12 +27,14 @@ Response Payload:
 	"price": 29.99,
 	"stockQuantity": 100
 }
-Description: Creates a new product with the given name, description, price, and stock quantity.
-Error Handling: Returns a 400 Bad Request error if the request payload is invalid.
-Database Operation: Inserts a new product into the database.
-1.2 Get All Products
-Endpoint: GET /api/products
-Response Payload:
+```
+* **Description: Creates a new product with the given name, description, price, and stock quantity.**
+* **Error Handling: Returns a  `400 Bad Request` error if the request payload is invalid.**
+* **Database Operation: Inserts a new product into the database.**
+**1.2 Get All Products**
+* **Endpoint: `GET /api/products`**
+* **Response Payload:**
+```
 [
 	{
 		"id": 1,
@@ -46,6 +51,8 @@ Response Payload:
 		"stockQuantity": 100
 	}
 ]
+
+```
 Description: Returns a list of all products.
 Error Handling: Returns a 500 Internal Server Error error if the database operation fails.
 Database Operation: Retrieves all products from the database.
